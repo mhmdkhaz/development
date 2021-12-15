@@ -1,0 +1,239 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* start in loader */
+#loader {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2222222222;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #162c3b;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end in loader */
+
+/* start in navbar */
+nav {
+  background-color: #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.change {
+  background-color: #162c3b;
+}
+
+nav .logo {
+  width: 260px;
+  height: 70px;
+}
+
+nav .collapse ul li .style {
+  color: #162c3b;
+  text-transform: none;
+  font-size: 20px;
+  font-family: "Bakbak One", cursive;
+  font-weight: 500;
+  margin-left: 80px;
+  text-decoration: none;
+  position: relative;
+}
+
+nav .collapse ul li .link:hover {
+  color: #91c827;
+}
+
+nav .collapse ul li .link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 50%;
+  bottom: 0;
+  background-color: #91c827;
+  transition: all 0.2s;
+}
+
+nav .collapse ul li .link:hover::before {
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: -4px;
+}
+/* end in navavar */
+
+/* start in header */
+.header {
+  background-image: linear-gradient(
+      to top,
+      rgb(0, 0, 0, 0.6),
+      rgb(0, 0, 0, 0.6)
+    ),
+    url(../imags/Asset\ 15-100.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 670px;
+  margin-top: 82px;
+}
+
+.header img {
+  position: relative;
+  top: 90px;
+  width: 40%;
+  height: 70%;
+}
+
+@media (max-width: 768px) {
+  .header img {
+    position: relative;
+    top: 90px;
+    width: 80%;
+    height: 70%;
+  }
+}
+/* end in header */
+
+/* start in section all */
+/* start in about */
+.section-all {
+  background-color: #162c3b;
+  width: 100%;
+  height: 100%;
+}
+
+.section-all .about,
+.profile , .contact {
+  margin-top: 120px;
+}
+
+.section-all .about .text-about h1 {
+  color: #eee;
+  position: relative;
+  margin: 40px 0 0 40px;
+  font-family: poopins;
+}
+
+.section-all .about .text-about h1::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #91c827;
+  position: absolute;
+  bottom: -4px;
+  font-family: "Bakbak One", cursive;
+}
+
+.section-all .about .text-about p {
+  color: #eee;
+  margin: 40px 0 0 40px;
+  font-size: 22px;
+  text-align: left;
+  font-family: "Bakbak One", cursive;
+  font-weight: 400;
+}
+
+.section-all .about .img-about img {
+  width: 100%;
+  height: 100%;
+}
+
+/* end in about */
+/* end in section all */
+
+/* start in profile */
+.profile {
+  margin-bottom: 30px;
+}
+
+.profile .btn-groub .btn {
+  width: 100px;
+  margin: 10px;
+  font-size: 0.8rem;
+  background-color: #91c827;
+  height: 40px;
+  color: #eee;
+}
+
+.profile .btn-groub .btn:hover {
+  color: #eee;
+}
+
+.profile .img-filter .filter {
+  width: 100%;
+}
+
+.profile .img-filter img {
+  width: 90%;
+  height: 90%;
+  animation: filter;
+  animation-duration: 0.9s;
+  margin: 10px;
+}
+@keyframes filter {
+  0% {
+    transform: none;
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0, -100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translate(0, -50);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.profile .img-filter .filter .text ol{
+    
+}
+
+.profile .img-filter .filter .text ol li {
+  color: #eee;
+  font-family: poopins;
+  width: 100%;
+  font-weight: 400;
+  font-size: 25px;
+}
+/* end in profile */
+
+/* start in contact */
+.contact{
+    background-color: #162c3b;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.contact .img-contact img{
+    width: 100%;
+    height: 100%;
+}
+
+.contact ul{
+    list-style: none;
+}
+
+.contact ul li a{
+    padding: 20px;
+    text-decoration: none;
+}
+/* end in contact */
